@@ -1,0 +1,17 @@
+FROM ubuntu:latest
+
+# Installing goodies
+RUN apt-get update -y
+RUN apt-get install software-properties-common git zsh wget curl -y
+
+# Installing Neovim
+RUN add-apt-repository ppa:neovim-ppa/stable -y
+RUN apt-get update -y
+RUN apt-get install neovim -y
+
+# Configuring Neovim
+ENV EDITOR=nvim
+RUN curl https://rawgit.com/dotpy3/dotfiles/master/.vimrc -o /root/.vimrc
+
+# Setting shell
+ENTRYPOINT /usr/bin/zsh
