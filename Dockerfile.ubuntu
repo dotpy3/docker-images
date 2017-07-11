@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 # Installing goodies
 RUN apt-get update -y
-RUN apt-get install software-properties-common git zsh wget curl -y
+RUN apt-get install man software-properties-common git zsh wget curl -y
 
 # Installing Neovim
 RUN add-apt-repository ppa:neovim-ppa/stable -y
