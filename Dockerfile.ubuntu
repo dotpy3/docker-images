@@ -11,7 +11,7 @@ RUN apt-get install neovim -y
 
 # Configuring Neovim
 ENV EDITOR=nvim
-RUN curl https://rawgit.com/dotpy3/dotfiles/master/.vimrc -o /root/.vimrc
+RUN curl https://raw.githubusercontent.com/dotpy3/dotfiles/master/.vimrc -o /root/.vimrc
 
 # Setting shell
 ENTRYPOINT /usr/bin/zsh
