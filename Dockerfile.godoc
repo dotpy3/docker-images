@@ -1,0 +1,2 @@
+FROM golang:stretch
+ENTRYPOINT ["godoc", "-http=:80"]
